@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.content_wrap {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  div {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    background-color: #efefef;
+    border: 1px solid #333;
+
+    button {
+      width: 70px;
+      height: 70px;
+      padding: 0.5em;
+      background-color: #ccc;
+      border-radius: 50%;
+      border: none;
+      color: #808080;
+
+      &[data-signal='true'].signal_color_red {
+        background-color: #e80d0d;
+        color: #fff;
+      }
+      &[data-signal='true'].signal_color_yellow {
+        background-color: #ecec0c;
+        color: #333;
+      }
+      &[data-signal='true'].signal_color_blue {
+        background-color: #0b0bec;
+        color: #fff;
+      }
+    }
+  }
+}
